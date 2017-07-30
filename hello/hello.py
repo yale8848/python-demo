@@ -10,5 +10,8 @@ def add_end(L=None):
         L = []
     L.append('END')
     return L
-print(add_end())
-print(add_end())
+
+def add(x, y, f):
+    return f(x) + f(y)
+
+print(add(-5, 6, abs))
