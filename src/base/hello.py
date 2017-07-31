@@ -54,5 +54,38 @@ bicycles.insert(2,'cc')
 del bicycles[2]
 bicycles.sort(reverse=True)
 for b in bicycles:
+    if b == 'aaa':
+        print(b)
+    else:
+        print('0---')
     print(b)
+
 print(bicycles)
+
+
+user_0 = {
+'username': 'efermi',
+'first': 'enrico',
+'last': 'fermi',
+}
+
+for k,v in user_0.items():
+    print(k+" "+v)
+
+list = ["aa"]
+
+def modify_list(list):
+    list[0]='bb'
+modify_list(list)
+print(list)
+
+
+def user_info(name,age,**infos):
+    info={}
+    info['name']=name
+    info['age']=age
+    for k,v in infos.items():
+        info[k]=v
+    return info
+
+print(user_info('aaa',11,home='xian',hobby='play'))
