@@ -34,8 +34,14 @@ class Ship():
 
     def update(self):
         if self.moving_left == True:
+            if self.rect.left <= 0:
+                self.rect.left = 0
+                return
             self.center -= float(self.ship_speed_factor)
         if self.moving_right == True:
+            if self.rect.right >= self.screen_rect.right:
+                self.rect.right = self.screen_rect.right
+                return
             self.center += float(self.ship_speed_factor)
         self.rect.centerx = self.center
 
